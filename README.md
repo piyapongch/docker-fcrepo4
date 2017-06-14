@@ -1,5 +1,7 @@
 # fcrepo4
-A simple docker build for installing Fedora 4 (https://github.com/fcrepo4/fcrepo4)
+[![Build Status](https://travis-ci.org/murny/fcrepo4.svg?branch=master)](https://travis-ci.org/murny/fcrepo4)
+
+Run Fedora 4 using docker (https://github.com/fcrepo4/fcrepo4)
 
 ## How to use this image
 Pull down image: `docker pull murny/fcrepo4`
