@@ -1,9 +1,9 @@
-# fcrepo4
+# docker fcrepo4
 [![](https://images.microbadger.com/badges/image/murny/docker-fcrepo4.svg)](https://microbadger.com/images/murny/docker-fcrepo4 "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/murny/docker-fcrepo4.svg)](https://microbadger.com/images/murny/docker-fcrepo4 "Get your own version badge on microbadger.com")
 [![Build Status](https://travis-ci.org/murny/docker-fcrepo4.svg?branch=master)](https://travis-ci.org/murny/docker-fcrepo4)
 
-Run Fedora 4 using docker (https://github.com/fcrepo4/fcrepo4)
+Run [Fedora 4](https://github.com/fcrepo4/fcrepo4) using docker 
 
 ## How to use this image
 Pull down image: `docker pull murny/docker-fcrepo4`
