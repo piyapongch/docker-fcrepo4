@@ -10,8 +10,8 @@ Open brower and navigate to `http://localhost:8080/fcrepo/rest/`
 In order to get some results, a couple of objects can be created:
 
 ```bash
-#> curl -X POST http://localhost:8080/fcrepo/rest -H "Slug:foo""
-#> curl -X POST http://localhost:8080/fcrepo/rest -H "Slug:bar""
+#> curl -X POST http://localhost:8080/fcrepo/rest -H "Slug:foo"
+#> curl -X POST http://localhost:8080/fcrepo/rest -H "Slug:bar"
 ```
 
 Try the various responses from the oai provider:
