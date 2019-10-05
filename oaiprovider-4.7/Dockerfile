@@ -1,7 +1,5 @@
 FROM tomcat:8.5
 
-ENV FCREPO_VERSION 4.7.4.3
-
 # add authentication credentials to Tomcat for Fcrepo
 # remove the closing tag, then use the echo|tee pattern to build it back in
 RUN sed -i 's|</tomcat-users>| |' $CATALINA_HOME/conf/tomcat-users.xml
@@ -23,12 +21,12 @@ ENV JAVA_OPTS="${JAVA_OPTS} \
   -Dfcrepo.log.directory=${CATALINA_HOME}/logs \
   -Dfcrepo.log.maxHistory=14 \
   -Dfcrepo.log.totalSizeCap=100000 \
-  -Dfcrepo.modeshape.configuration=classpath:/config/minimal-default/repository.json \
+  -Dfcrepo.modeshape.configuration=classpath:/config/file-simple/repository.json \
   -Dfcrepo.modeshape.index.directory=/fcrepo4-data/modeshape.index \
   -Dfcrepo.streaming.parallel=true \
   -Dfcrepo.home=/fcrepo4-data \
+  -Dfcrepo.triplestore.activemq.broker=localhost:61616 \
 "
 
 # Install Fedora with OAI-Provider
-ADD https://github.com/ualbertalib/fcrepo4-oaiprovider/releases/download/fcrepo4-oaiprovider-${FCREPO_VERSION}/fcrepo-oaiprovider-${FCREPO_VERSION}.war ${CATALINA_HOME}/webapps/fcrepo.war
-
+ADD ./fedora.war ${CATALINA_HOME}/webapps/fedora.war
