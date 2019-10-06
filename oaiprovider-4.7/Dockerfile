@@ -29,4 +29,4 @@ ENV JAVA_OPTS="${JAVA_OPTS} \
 "
 
 # Install Fedora with OAI-Provider
-ADD ./fedora.war ${CATALINA_HOME}/webapps/fedora.war
+ADD ./fcrepo.war ${CATALINA_HOME}/webapps/fcrepo.war
