@@ -25,8 +25,12 @@ ENV JAVA_OPTS="${JAVA_OPTS} \
   -Dfcrepo.modeshape.index.directory=/fcrepo4-data/modeshape.index \
   -Dfcrepo.streaming.parallel=true \
   -Dfcrepo.home=/fcrepo4-data \
+  -Dfcrepo.dynamic.jms.port=51516 \
+  -Dfcrepo.dynamic.stomp.port=51513 \
   -Dfcrepo.triplestore.activemq.broker=localhost:61616 \
 "
 
 # Install Fedora with OAI-Provider
 ADD ./fcrepo.war ${CATALINA_HOME}/webapps/fcrepo.war
+
+EXPOSE 8080 51516 51513
