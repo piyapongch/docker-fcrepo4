@@ -1,11 +1,29 @@
-Run [Fedora 4 with OAI Provider](https://github.com//ualbertalib/fcrepo4-oaiprovider) using docker 
+# Fedora 4.7.4 with OAI Provider
 
-## How to use this image
-Pull down image: `docker pull ualbertalib/docker-fcrepo4:oaiprovider-4.7`
+## Build docker
+```shell
+$ docker build -t pcharoen/fcrepo:4.7.4.t1 .
+```
 
-Run the image, mapping your ports to your localmachine: `docker run -p 8080:8080 ualbertalib/docker-fcrepo4:oaiprovider-4.7`
+## Push to dockerhub
+```shell
+$ docker login
+$ docker push pcharoen/fcrepo:4.7.4.t1
+```
+## Run 
+```shell
+$ docker-compose up -d
+```
 
-Open brower and navigate to `http://localhost:8080/fcrepo/rest/`
+## UI
+```shell
+http://localhost:8080/fcrepo/rest/
+```
+
+## Ingest Sample Data
+```shell
+TODO: add sample data and ingest commands
+```
 
 In order to get some results, a couple of objects can be created:
 

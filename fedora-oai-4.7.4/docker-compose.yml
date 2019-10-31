@@ -1,0 +1,18 @@
+version: '3'
+
+volumes:
+  fcrepo:
+    driver: local
+
+services:
+  fcrepo:
+    restart: always
+    image: pcharoen/fcrepo:4.7.4.t1
+    volumes:
+      - fcrepo:/fcrepo4-data
+    env_file:
+      - .env_fcrepo
+    ports:
+      - "8080:8080"
+      - "51516:51516"
+      - "51513:51513"
