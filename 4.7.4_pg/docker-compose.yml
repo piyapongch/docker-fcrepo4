@@ -1,0 +1,36 @@
+version: '3'
+
+volumes:
+  fcrepo:
+    driver: local
+  postgres:
+    driver: local
+
+services:
+  fcrepo:
+    container_name: fcrepo
+    image: pcharoen/fcrepo:4.7.4.t1
+    volumes:
+      - ./fedora_data:/fedora_data
+    env_file:
+      - .env_fcrepo
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    restart: always
+  postgres:
+    container_name: postgres
+    image: postgres:9.6-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    ports:
+      - "5432:5432"
+    volumes: 
+      - postgres:/var/lib/postgresql/data
+    restart: always
