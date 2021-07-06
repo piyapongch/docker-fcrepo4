@@ -11,7 +11,7 @@ services:
     container_name: fcrepo
     image: pcharoen/fcrepo:4.7.4.t1
     volumes:
-      - ./fedora_data:/fedora_data
+      - ${FCREPO_HOME}:/fedora_data
     env_file:
       - .env_fcrepo
     ports:
