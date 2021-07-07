@@ -4,7 +4,7 @@ docker-compose for Fedora 4.7.4 with Postgres DB configuration
 # Initialize Postgres DB
 
 ```shell
-$ docker-compose up postgres
+$ docker-compose --env-file .env_prod up -d postgres
 $ docker cp ./fcrepo.sql.gz postgres:/tmp # copy fcrepo database dump to postgres container
 $ docker exec -it postgres /bin/bash      # run bash shell on the container
 $ cd /tmp
@@ -28,5 +28,5 @@ FCREPO_HOME=/media/pcharoen/WDMyBook/fedora_home
 ```
 
 ```shell
-$ docker-compose --env-file=.env_prod up fcrepo
+$ docker-compose --env-file=.env_prod up -d fcrepo
 ```
