@@ -11,10 +11,11 @@ $ cd /tmp
 $ gzip -d fcrepo.sql.gz                   # extract the database dump
 $ su - postgres
 $ psql
-$ psql> create database fcrepo;           # create fcrepo database
-$ psql> \q
+$ postgres=# create database fcrepo;      # create fcrepo database
+$ postgres=# \q
 $ psql fcrepo < fcrepo.sql                # import data to the database
-$ exit
+$ exit                                    # exit from postgres user
+$ exit                                    # exit from postgres container
 ```
 
 # Start fcrepo service
