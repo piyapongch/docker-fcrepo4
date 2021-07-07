@@ -12,8 +12,6 @@ services:
     image: pcharoen/fcrepo:4.7.4.t1
     volumes:
       - ${FCREPO_HOME}:/fedora_data
-    env_file:
-      - .env_fcrepo
     ports:
       - "8080:8080"
     depends_on:

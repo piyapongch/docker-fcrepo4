@@ -1,4 +1,4 @@
-# docker fcrepo4
+# docker-fcrepo4
 [![](https://images.microbadger.com/badges/image/ualbertalib/docker-fcrepo4.svg)](https://microbadger.com/images/ualbertalib/docker-fcrepo4 "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/ualbertalib/docker-fcrepo4.svg)](https://microbadger.com/images/ualbertalib/docker-fcrepo4 "Get your own version badge on microbadger.com")
 [![Build Status](https://travis-ci.org/ualbertalib/docker-fcrepo4.svg?branch=master)](https://travis-ci.org/ualbertalib/docker-fcrepo4)
