@@ -17,6 +17,8 @@ services:
     depends_on:
       - postgres
     restart: always
+    environment:
+      - JAVA_OPTS=${JAVA_OPTS}
   postgres:
     container_name: postgres
     image: postgres:9.6-alpine
