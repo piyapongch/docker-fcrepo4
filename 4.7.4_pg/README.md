@@ -31,3 +31,13 @@ FCREPO_HOME=/media/pcharoen/WDMyBook/fedora_data
 ```shell
 $ docker-compose --env-file=.env_prod up -d fcrepo
 ```
+
+# Stop services
+```shell
+$ docker-compose --env-file=.env_prod stop
+```
+
+# Start Fedora 4.7.4 server
+```shell
+$ docker-compose --env-file=.env_prod start
+```
